@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>hexo教程二 | 湖陆海的小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#第二部分hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流。 1.hexo基本配置在文件根目录下的_config.yml，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。 网站参数描述 title网站标题subtitle网站副标题description网站描述author您的名字language网站使用的语言tim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo教程二">
+<meta property="og:url" content="http://yoursite.com/2018/10/15/hexo教程二/index.html">
+<meta property="og:site_name" content="湖陆海的小站">
+<meta property="og:description" content="#第二部分hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流。 1.hexo基本配置在文件根目录下的_config.yml，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。 网站参数描述 title网站标题subtitle网站副标题description网站描述author您的名字language网站使用的语言tim">
+<meta property="og:locale" content="中文">
+<meta property="og:updated_time" content="2018-10-15T13:44:52.654Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo教程二">
+<meta name="twitter:description" content="#第二部分hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流。 1.hexo基本配置在文件根目录下的_config.yml，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。 网站参数描述 title网站标题subtitle网站副标题description网站描述author您的名字language网站使用的语言tim">
+  
+    <link rel="alternate" href="/atom.xml" title="湖陆海的小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">湖陆海的小站</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">人心，关起会细小如尘，不可以载起旁人，麻木闭塞一生。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo教程二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/15/hexo教程二/" class="article-date">
+  <time datetime="2018-10-15T13:18:46.000Z" itemprop="datePublished">2018-10-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo教程二
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#第二部分<br>hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流。</p>
+<h2 id="1-hexo基本配置"><a href="#1-hexo基本配置" class="headerlink" title="1.hexo基本配置"></a>1.hexo基本配置</h2><p>在文件根目录下的_config.yml，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。</p>
+<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><p><strong>参数描述</strong> title网站标题subtitle网站副标题description网站描述author您的名字language网站使用的语言timezone网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。<br>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p><strong>参数描述</strong>url网址root网站根目录permalink文章的 永久链接 格式permalink_defaults永久链接中各部分的默认值<br>在这里，你需要把url改成你的网站域名。<br>permalink，也就是你生成某个文章时的那个链接格式。<br>比如我新建一个文章叫’temp.md’，那么这个时候他自动生成的地址就是<br>‘ <a href="http://yoursite.com/2018/09/05/temp">http://yoursite.com/2018/09/05/temp</a> ‘。<br>以下是官方给出的示例，关于链接的变量还有很多，需要的可以去官网上查找 <a href="https://hexo.io/zh-cn/docs/permalinks" target="_blank" rel="noopener">永久链接</a> 。<br>参数结果:year/:month/:day/:title/2013/07/14/hello-world:year-:month-:day-:title.html2013-07-14-hello-world.html:category/:titlefoo/bar/hello-world</p>
+<p>再往下翻，中间这些都默认就好了。</p>
+<p>‘<br>    theme: landscape</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type: git<br>  repo: <repository url=""><br>  branch: [branch]<br>‘<br>‘​theme’就是选择什么主题，也就是在’theme’这个文件夹下，在官网上有很多个主题，默认给你安装的是’lanscape’这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在’theme’文件夹下，再修改这个参数就可以了。<br>接下来这个’ deploy ‘就是网站的部署的，’ repo ‘就是仓库’ (Repository) ‘的简写。branch选择仓库的哪个分支。这个在之前进行’ github page ‘部署的时候已经修改过了，不再赘述。而这个在后面进行双平台部署的时候会再次用到。</repository></p>
+<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 ‘ — ‘分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<p>‘<br>title: Hello World</p>
+<h2 id="date-2013-7-13-20-46-25"><a href="#date-2013-7-13-20-46-25" class="headerlink" title="date: 2013/7/13 20:46:25"></a>date: 2013/7/13 20:46:25</h2><p>‘<br>下是预先定义的参数，您可在模板中使用这些参数值并加以利用。<br>参数描述’ layout ‘布局’ title ‘标题’ date ‘建立日期’ updated ‘更新日期’ comments ‘开启文章的评论功能’ tags ‘标签（不适用于分页）’ categories ‘分类（不适用于分页）’    permalink ‘覆盖文章网址</p>
+<p>其中，分类和标签需要区别一下，分类具有顺序性和层次性，也就是说’ Foo ‘, ‘ Bar ‘ 不等于 ‘ Bar ‘,’ Foo ‘；而标签没有顺序和层次。<br> ‘<br>categories:</p>
+<ul>
+<li>Diary<br>tags:</li>
+<li>PS3</li>
+<li>Games<br>‘<br>###layout（布局）</li>
+</ul>
+<p>当你每一次使用代码<br>‘<br>  hexo new paper<br>‘<br>它其实默认使用的是’ post ‘这个布局，也就是在’ source ‘文件夹下的’ _post ‘里面。<br>Hexo 有三种默认布局：’ post ‘、’ page ‘和’ draft ‘，它们分别对应不同的路径，而您自定义的其他布局和’ post ‘相同，都将储存到’ source/_posts ‘文件夹。<br>布局路径’ postsource/_postspagesourcedraftsource/_drafts ‘<br>而new这个命令其实是：<br>‘<br>hexo new [layout] <title><br>‘<br>只不过这个layout默认是post罢了。</title></p>
+<h3 id="page"><a href="#page" class="headerlink" title="page"></a>page</h3><p>如果你想另起一页，那么可以使用<br>‘<br>hexo new page board<br>‘<br>系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是’ <a href="http://xxx.xxx/board" target="_blank" rel="noopener">http://xxx.xxx/board</a> ‘</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/15/hexo教程二/" data-id="cjnacps6d000294m3d30fbfkg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/14/hexo-d无反应问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo d无反应问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/15/hexo教程二/">hexo教程二</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/14/hexo-d无反应问题/">hexo d无反应问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/14/hexo设置教程/">hexo设置教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 湖陆海<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
