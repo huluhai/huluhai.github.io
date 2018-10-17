@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="湖陆海的小站">
 <meta property="og:description" content="Hexo简介(转自知乎专栏) Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。 教程分三个部分， 第一部分：hexo的初级搭建还有部署到github page上，以及个人域名的绑定(我就不绑">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2018-10-16T12:59:52.458Z">
+<meta property="og:updated_time" content="2018-10-17T13:37:03.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo设置教程">
 <meta name="twitter:description" content="Hexo简介(转自知乎专栏) Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。 教程分三个部分， 第一部分：hexo的初级搭建还有部署到github page上，以及个人域名的绑定(我就不绑">
@@ -140,40 +140,44 @@ hexo server
 <p>创建一个和你用户名相同的仓库，后面加.<a href="http://github.io，" target="_blank" rel="noopener">http://github.io，</a> 只有这样，将来要部署到GitHub page的时候，才会被识别，也就是 <a href="http://xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a>  ,其中xxx就是你注册GitHub的用户名。我这里是已经建过了。</p>
 <p>点击create repository。</p>
 <h4 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h4><p>回到你的git bash中，</p>
-<p>‘</p>
 <pre><code>git config --global user.name &quot;yourname&quot;
 git config --global user.email &quot;youremail&quot;
-</code></pre><p>‘</p>
-<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
-<p>可以用以下两条，检查一下你有没有输对<br>‘</p>
+</code></pre><p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<p>可以用以下两条，检查一下你有没有输对</p>
 <pre><code>git config user.name
 git config user.email
-</code></pre><p>‘</p>
-<p>然后创建SSH,一路回车<br>‘</p>
+</code></pre><p>然后创建SSH,一路回车</p>
 <pre><code>ssh-keygen -t rsa -C &quot;youremail&quot;
-</code></pre><p>‘<br>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。<br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击<code>New SSH key</code> 把你的id_rsa.pub里面的信息复制进去。<br>在gitbash中，查看是否成功<br>‘</p>
+</code></pre><p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。<br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击<code>New SSH key</code> 把你的id_rsa.pub里面的信息复制进去。<br>在gitbash中，查看是否成功</p>
 <pre><code>ssh -T git@github.com
-</code></pre><p>‘</p>
-<h4 id="6-将hexo部署到GitHub"><a href="#6-将hexo部署到GitHub" class="headerlink" title="6.将hexo部署到GitHub"></a>6.将hexo部署到GitHub</h4><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件<code> _config.yml</code>，翻到最后，修改为 YourgithubName就是你的GitHub账户</p>
+</code></pre><h4 id="6-将hexo部署到GitHub"><a href="#6-将hexo部署到GitHub" class="headerlink" title="6.将hexo部署到GitHub"></a>6.将hexo部署到GitHub</h4><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件<code> _config.yml</code>，翻到最后，修改为 YourgithubName就是你的GitHub账户</p>
 <p>‘</p>
 <pre><code>deploy:
   type: git
   repo: https://github.com/YourgithubName/YourgithubName.github.io.git
   branch: master
-</code></pre><p>‘<br>这个时候需要先安装<code>deploy-git</code> ，也就是部署的命令,这样你才能用命令部署到GitHub。<br>‘  </p>
+</code></pre><p>‘<br>这个时候需要先安装<code>deploy-git</code> ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
 <pre><code>npm install hexo-deployer-git --save
-</code></pre><p>  ‘<br>然后<br>‘</p>
+</code></pre><p>然后</p>
 <pre><code>hexo clean
 hexo generate
 hexo deploy
-</code></pre><p>‘<br>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<code> hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写 <code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
+</code></pre><p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<code> hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写 <code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
 <p>注意deploy时可能要你输入username和password。</p>
+<p>####7.设置个人域名<br>现在你的个人网站的地址是 yourname.github.io，如果觉得网址逼格不太够，这就需要你设置个人域名了。但是需要花钱。</p>
+<p>注册一个阿里云账户,在阿里云上买一个域名，我买的是huzt.top，各个后缀的价格不太一样，比如最广泛的.com就比较贵，看个人喜好咯。你需要先去进行实名认证,然后在域名控制台中，看到你购买的域名。<br>点解析进去，添加解析。</p>
+<hr>
+<p>其中，192.30.252.153 和 192.30.252.154 是GitHub的服务器地址。 注意，解析线路选择默认.<br><del>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名fangzh.top(已经不用这一步了)</del><br>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。<br>最后，在gitbash中，输入</p>
+<pre><code>hexo clean
+hexo g
+hexo d
+</code></pre><p>过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！<br>接下来你就可以正式开始写文章了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/14/hexo设置教程/" data-id="cjnd6lvmp0003a0m3kh915ub9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/14/hexo设置教程/" data-id="cjnd85iu900030km36tzqpzqf" class="article-share-link">Share</a>
       
       
     </footer>
